@@ -4,7 +4,7 @@
 			"path": "./auth-service",
       "name": "AUTH_SERVICE",
       "settings": {
-        "python.defaultInterpreterPath": "./auth/venv/bin/python"
+        "python.defaultInterpreterPath": "./auth/.venv/bin/python"
       }
 		},
     {
@@ -12,5 +12,13 @@
       "name": "COMPOSE"
     }
   ],
-  "settings": {}
+  "settings": {
+    "[python]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "charliermarsh.ruff",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports.ruff": true
+      }
+    }
+  }
 }
