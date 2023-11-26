@@ -1,8 +1,16 @@
 {
 	"folders": [
 		{
-			"path": "."
-		}
+			"path": "./auth-service",
+      "name": "AUTH_SERVICE",
+      "settings": {
+        "python.defaultInterpreterPath": "./auth/venv/bin/python"
+      }
+		},
+    {
+      "path": "./compose",
+      "name": "COMPOSE"
+    }
   ],
   "settings": {}
 }
