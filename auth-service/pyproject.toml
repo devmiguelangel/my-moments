@@ -1,6 +1,18 @@
-[tool.ruff]
+[tool.poetry]
+name = "auth-service"
+version = "0.1.0"
+description = "Auth Service"
+authors = ["Miguel Angel <me@miguelangel.co>"]
+readme = "README.md"
 
-paths = [
-    "src",
-    "tests",
-]
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.105.0"
+pydantic = "^2.5.2"
+uvicorn = "^0.24.0.post1"
+ruff = "^0.1.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

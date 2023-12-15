@@ -8,8 +8,8 @@ services:
   auth:
     build:
       context: .
-      dockerfile: ./compose/app/Dockerfile
-    image: devmiguelangel/insta_service:latest
+      dockerfile: ./compose/base/Dockerfile
+    image: devmiguelangel/auth_service:latest
     container_name: my_auth_service
     volumes:
       - ./auth-service:/app
