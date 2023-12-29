@@ -7,12 +7,43 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-fastapi = "^0.105.0"
-pydantic = "^2.5.2"
-uvicorn = "^0.24.0.post1"
-ruff = "^0.1.8"
+fastapi = "^0.108.0"
+pydantic = "^2.5.3"
+uvicorn = "^0.25.0"
+ruff = "^0.1.9"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "D4",  # flake8-docstrings
+    "PT",  # flake8-pytest
+    "PL",  # flake8-pytest-style
+    "Q",  # flake8-quotes
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "UP",  # pyupgrade
+]
+ignore = ["E501", "D401", "D417"]
+# Set the maximum line length to 120.
+line-length = 120
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+[tool.ruff.lint]
+# Add the `line-too-long` rule to the enforced rule set.
+extend-select = ["E501"]
+
+[tool.ruff.format]
+# Use single quotes rather than double quotes.
+quote-style = "single"
